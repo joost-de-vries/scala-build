@@ -24,7 +24,8 @@ Vagrant.configure(2) do |config|
   # end
 
   config.vm.provision "docker" do |d|
-    d.build_image "/vagrant", args:"-t local/scala_build"
-	d.run "local/scala_build"
+    d.build_image "/vagrant/java8", args:"-t local/java8"
+    d.build_image "/vagrant/sbt", args:"-t local/sbt"
+	d.run "local/sbt"
   end
 end
