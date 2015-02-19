@@ -8,10 +8,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder ".", "/vagrant"
 
-  # Provider-specific configuration so you can fine-tune various
-  # backing providers for Vagrant. These expose provider-specific options.
-  # Example for VirtualBox:
-  #
   config.vm.provider "virtualbox" do |vb|
      vb.gui = false
      vb.memory = "2048"
